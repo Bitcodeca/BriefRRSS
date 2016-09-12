@@ -15,154 +15,164 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <style>
+            .rayaazul {position: absolute; width: 100%; height: 40%; z-index: -1; }
+            .padding { padding: 3% 0 3% 0;}
+            .padding20px {padding: 20px;}
+            i { color: #616161; }
+        </style>
     </head>
-    <body ng-app="contactApp">
+    <body ng-app="contactApp" class="grey lighten-4">
+            <div class="rayaazul blue"></div>
             <div class="container">
                 <div class="col s12">
-                    <h3 class="center-align" >Brief Redes Sociales</h3>
-                    <div class="divider"></div>
-                    <br>
-                    <div class="divider"></div>
-                    <br><br>
+                    <div class="center-align padding">
+                        <img src="logoemblema2.png" class="responsive-img">
+                    </div>
+                    <div class="card-panel">
+                        <h3 class="center-align" >Brief Redes Sociales</h3>
+                        <div class="divider"></div>
+                        <br>
 
-                    <div ng-controller="ContactController">
+                        <div ng-controller="ContactController" class="padding20px">
 
-                        <form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
-                            <div class="row">
+                            <form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p0.$invalid && submitted }">
-                                    <h5>Nombre de empresa</h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">account_balance</i>
-                                        <input ng-model="formData.p0" id="p0" name="p0" type="text">
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p0.$invalid && submitted }">
+                                        <h5>Nombre de empresa</h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">account_balance</i>
+                                            <input ng-model="formData.p0" id="p0" name="p0" type="text">
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p1.$invalid && submitted }">
-                                    <h5>¿Cuál es el propósito general de su marca? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">pageview</i>
-                                        <textarea ng-model="formData.p1" id="p1" name="p1"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p1.$invalid && submitted }">
+                                        <h5>¿Cuál es el propósito general de su marca? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">search</i>
+                                            <textarea ng-model="formData.p1" id="p1" name="p1"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p2.$invalid && submitted }">
-                                    <h5>¿Qué es lo que usted o su empresa quiere lograr con las redes sociales? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">done_all</i>
-                                        <textarea ng-model="formData.p2" id="p2" name="p2"  class="materialize-textarea"></textarea>
-                                    </div>
-                                </span>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p2.$invalid && submitted }">
+                                        <h5>¿Qué es lo que usted o su empresa quiere lograr con las redes sociales? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">done_all</i>
+                                            <textarea ng-model="formData.p2" id="p2" name="p2"  class="materialize-textarea"></textarea>
+                                        </div>
+                                    </span>
 
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
-                                <span class=" " ng-class="{ 'has-error': contactform.p3.$invalid && submitted }">
-                                    <h5>¿Quién es su público objetivo? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">mood</i>
-                                        <textarea ng-model="formData.p3" id="p3" name="p3"  class="materialize-textarea"></textarea>
-                                    </div>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
+                                    <span class=" " ng-class="{ 'has-error': contactform.p3.$invalid && submitted }">
+                                        <h5>¿Quién es su público objetivo? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">group</i>
+                                            <textarea ng-model="formData.p3" id="p3" name="p3"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
-                                <span class=" " ng-class="{ 'has-error': contactform.p4.$invalid && submitted }">
-                                    <h5>¿Qué temas y fuentes de información son más importantes para ellos? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">perm_device_information</i>
-                                        <textarea ng-model="formData.p4" id="p4" name="p4"  class="materialize-textarea"></textarea>
-                                    </div>
-                                </span>
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
+                                    <span class=" " ng-class="{ 'has-error': contactform.p4.$invalid && submitted }">
+                                        <h5>¿Qué temas y fuentes de información son más importantes para ellos? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">perm_device_information</i>
+                                            <textarea ng-model="formData.p4" id="p4" name="p4"  class="materialize-textarea"></textarea>
+                                        </div>
+                                    </span>
 
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
-                                <div class=" " ng-class="{ 'has-error': contactform.p5.$invalid && submitted }">
-                                    <h5>¿Qué redes sociales están utilizando? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">share</i>
-                                        <textarea ng-model="formData.p5" id="p5" name="p5"  class="materialize-textarea"></textarea>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
+                                    <div class=" " ng-class="{ 'has-error': contactform.p5.$invalid && submitted }">
+                                        <h5>¿Qué redes sociales están utilizando? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">share</i>
+                                            <textarea ng-model="formData.p5" id="p5" name="p5"  class="materialize-textarea"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                    
-                    <div class="divider"></div>
-                            <div class="row">
+                        
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p6.$invalid && submitted }">
-                                    <h5>¿Cuáles son sus principales competidores en línea? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">adb</i>
-                                        <textarea ng-model="formData.p6" id="p6" name="p6"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p6.$invalid && submitted }">
+                                        <h5>¿Cuáles son sus principales competidores en línea? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">adb</i>
+                                            <textarea ng-model="formData.p6" id="p6" name="p6"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p7.$invalid && submitted }">
-                                    <h5>¿Qué emociones es lo que esperan transmitir a través de imágenes y mensajería de la marca? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">camera</i>
-                                        <textarea ng-model="formData.p7" id="p7" name="p7"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p7.$invalid && submitted }">
+                                        <h5>¿Qué emociones es lo que esperan transmitir a través de imágenes y mensajería de la marca? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">camera</i>
+                                            <textarea ng-model="formData.p7" id="p7" name="p7"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p8.$invalid && submitted }">
-                                    <h5>¿Qué tipo de contenido se debe escribir en las redes sociales? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">fingerprint</i>
-                                        <textarea ng-model="formData.p8" id="p8" name="p8"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p8.$invalid && submitted }">
+                                        <h5>¿Qué tipo de contenido se debe escribir en las redes sociales? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">border_color</i>
+                                            <textarea ng-model="formData.p8" id="p8" name="p8"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p9.$invalid && submitted }">
-                                    <h5>¿Cuáles son los principales temas, categorías o mensajes que apoyan su marca? </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">verified_user</i>
-                                        <textarea ng-model="formData.p9" id="p9" name="p9"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p9.$invalid && submitted }">
+                                        <h5>¿Cuáles son los principales temas, categorías o mensajes que apoyan su marca? </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">verified_user</i>
+                                            <textarea ng-model="formData.p9" id="p9" name="p9"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                    <div class="divider"></div>
-                            <div class="row">
+                                    </span>
+                                </div>
+                        <div class="divider"></div>
+                                <div class="row">
 
-                                <span class=" " ng-class="{ 'has-error': contactform.p10.$invalid && submitted }">
-                                    <h5>Otros datos que puedan ser importantes para su empresa. </h5>
-                                    <div class="input-field">
-                                        <i class="material-icons prefix">thumb_up</i>
-                                        <textarea ng-model="formData.p10" id="p10" name="p10"  class="materialize-textarea"></textarea>
-                                    </div>
+                                    <span class=" " ng-class="{ 'has-error': contactform.p10.$invalid && submitted }">
+                                        <h5>Otros datos que puedan ser importantes para su empresa. </h5>
+                                        <div class="input-field">
+                                            <i class="material-icons prefix">comment</i>
+                                            <textarea ng-model="formData.p10" id="p10" name="p10"  class="materialize-textarea"></textarea>
+                                        </div>
 
-                                </span>
-                            </div>
-                            <div class="row center-align">
-                                <button type="submit" class="btn " ng-disabled="submitButtonDisabled"><i class="material-icons left">send</i>Enviar</button>
-                            </div>
-                        </form>
-                        <h2 ng-class="result" class="white-text center-align" style="padding: 15px; margin: 0;">
-                            {{ resultMessage }}
-                        </h2>
+                                    </span>
+                                </div>
+                                <div class="row center-align">
+                                    <button id="button" type="submit" class="btn blue" ng-disabled="submitButtonDisabled"><i class="material-icons left white-text">send</i>{{ searchButtonText }}</button>
+                                </div>
+                            </form>
+                            <h3 ng-class="result" class="white-text center-align" style="padding: 15px; margin: 0;">
+                                {{ resultMessage }}
+                            </h3>
+                    </div>
                 </div>
             </div>
 

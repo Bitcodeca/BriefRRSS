@@ -82,8 +82,8 @@ if (isset($_POST['p0'])) {
 
     $mail = new PHPMailer();
     $mail->CharSet = 'UTF-8';                      
-    $mail->From = $_POST['p0'];
-    $mail->FromName = $_POST['p0'];
+    $mail->From = 'bitcodemail@gmail.com';
+    $mail->FromName = 'Brief para RRSS';
     $mail->AddAddress('bitcodemail@gmail.com');
     $mail->Subject = 'Respuesta de Brief para RRSS';
 
